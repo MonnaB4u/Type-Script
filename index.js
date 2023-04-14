@@ -20,3 +20,16 @@ users.unshift("a");
 console.log("Array unShift", users);
 users.shift();
 console.log("Array shift", users);
+console.log("-------------------------------  Class ---------------------------------");
+var User = /** @class */ (function () {
+    function User(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    User.prototype.display = function () {
+        console.log("".concat(this.name, ", age:").concat(this.age));
+    };
+    return User;
+}());
+var user1 = new User("Munna", 25);
+user1.display();
